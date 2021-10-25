@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { TodosComponent } from './todos/todos.component';
 import {CommonModule} from "./common/common.module";
 import {FormsModule} from "@angular/forms";
+import {PrincipalModule} from "./principal/principal.module";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    PrincipalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
