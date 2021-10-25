@@ -1,3 +1,9 @@
+<h4>Añadir tarea</h4>
+<form (submit)="addTodo()">
+  <input type="text" [(ngModel)]="todo.text"
+         [ngModelOptions]="{standalone: true}"/>
+</form>
+<h2>{{todo.text}}</h2>
 <h3>Listado de tareas</h3>
 <ul>
   <li *ngFor="let todo of todos">
