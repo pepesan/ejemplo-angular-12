@@ -24,4 +24,13 @@ export class TodosComponent implements OnInit {
     this.todos.push(mitodo);
     this.todo.text = "";
   }
+
+  deleteTodo(text: string) {
+    for(let i=0; i<this.todos.length; i++){
+      const todo = this.todos[i];
+      if(todo.text==text){
+        this.todos.splice(i,1);
+      }
+    }
+  }
 }
