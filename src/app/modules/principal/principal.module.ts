@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './components/main/main.component';
 import {CommonModule} from "../common/common.module";
 
 
