@@ -10,8 +10,6 @@ import {environment} from "../../../../environments/environment";
 })
 export class TypicodeService {
 
-  private url : string = "https://jsonplaceholder.typicode.com/posts";
-
   constructor(private httpClient: HttpClient) { }
   getPosts() {
     return this.httpClient.get<Observable<TypicodePost[]>>(environment.typicodeBaseUrl+"/posts")

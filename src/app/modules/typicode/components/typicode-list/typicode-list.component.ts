@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TypicodeService} from "../../services/typicode-service.service";
 import {Observable} from "rxjs";
-import { EMPTY, of } from "rxjs";
+import { EMPTY } from "rxjs";
 import {TypicodePost} from "../../models/typicode-post";
 
 @Component({
