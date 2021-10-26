@@ -8,6 +8,7 @@ import {CommonModule} from "./modules/common/common.module";
 import {FormsModule} from "@angular/forms";
 import {PrincipalModule} from "./modules/principal/principal.module";
 import {TodosModule} from "./modules/todos/todos.module";
+import {PartidosModule} from "./modules/partidos/partidos.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {TodosModule} from "./modules/todos/todos.module";
     CommonModule,
     FormsModule,
     PrincipalModule,
-    TodosModule
+    TodosModule,
+    PartidosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
