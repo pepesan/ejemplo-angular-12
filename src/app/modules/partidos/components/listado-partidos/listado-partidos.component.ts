@@ -19,7 +19,7 @@ export class ListadoPartidosComponent implements OnInit {
     // console.log(this.listado);
     this.listadopartidosObservable.subscribe((data) => {
       console.log(data);
-      // data.subscribe(console.log);
+      console.log(data.length);
 
       data.forEach( (value : Partido) =>
         this.listadoVisible.push(value)
