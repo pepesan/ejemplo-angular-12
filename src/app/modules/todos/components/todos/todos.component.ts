@@ -9,7 +9,7 @@ import {TodoService} from "../../services/todo/todo.service"
 export class TodosComponent implements OnInit {
   public todos: any[] = [];
   public todo: any;
-  public dato: string = "";
+  public dato: any = {};
 
   constructor(private todoService:TodoService) { }
 
@@ -19,7 +19,7 @@ export class TodosComponent implements OnInit {
       {text:"hacer la compra"},
       {text: "revisar el coche"}
     ];
-    this.dato = this.todoService.cogeDatos().text;
+    this.dato = this.todoService.cogeDatos();
     console.log(this.dato);
   }
 
