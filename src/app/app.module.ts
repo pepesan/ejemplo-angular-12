@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import {PrincipalModule} from "./modules/principal/principal.module";
 import {TodosModule} from "./modules/todos/todos.module";
 import {PartidosModule} from "./modules/partidos/partidos.module";
+import {TypicodeModule} from "./modules/typicode/typicode.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {PartidosModule} from "./modules/partidos/partidos.module";
     FormsModule,
     PrincipalModule,
     TodosModule,
-    PartidosModule
+    PartidosModule,
+    TypicodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

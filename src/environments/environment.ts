@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://cursosdedesarrollo.com/pactometro/resultados.json'
+  baseUrl: 'https://cursosdedesarrollo.com/pactometro/resultados.json',
+  typicodeBaseUrl: "https://jsonplaceholder.typicode.com"
 };
 
 /*
