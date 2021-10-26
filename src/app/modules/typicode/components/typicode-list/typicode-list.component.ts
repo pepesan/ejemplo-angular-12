@@ -19,7 +19,7 @@ export class TypicodeListComponent implements OnInit {
 
   ngOnInit(): void {
     this.listadoObservable = this.typicodeService.getPosts();
-    this.listadoObservable.subscribe((data) => {
+    this.listadoObservable.subscribe((data: TypicodePost[]) => {
       console.log(data);
       console.log(data.length);
 
