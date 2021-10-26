@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {TypicodeService} from "../../services/typicode-service.service";
 import {Observable} from "rxjs";
 import { EMPTY } from "rxjs";
@@ -9,7 +9,7 @@ import {TypicodePost} from "../../models/typicode-post";
   templateUrl: './typicode-list.component.html',
   styleUrls: ['./typicode-list.component.sass']
 })
-export class TypicodeListComponent implements OnInit {
+export class TypicodeListComponent implements OnInit, OnDestroy {
 
   public listadoObservable: Observable<TypicodePost[]> = EMPTY;
   public listadoVisible: TypicodePost[] = [];
@@ -29,6 +29,9 @@ export class TypicodeListComponent implements OnInit {
 
       console.log(this.listadoVisible);
     });
+  }
+
+  ngOnDestroy(): void {
   }
 
 }

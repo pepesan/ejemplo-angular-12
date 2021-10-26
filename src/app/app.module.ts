@@ -10,6 +10,7 @@ import {PrincipalModule} from "./modules/principal/principal.module";
 import {TodosModule} from "./modules/todos/todos.module";
 import {PartidosModule} from "./modules/partidos/partidos.module";
 import {TypicodeModule} from "./modules/typicode/typicode.module";
+import {EventosModule} from "./modules/eventos/eventos.module";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {TypicodeModule} from "./modules/typicode/typicode.module";
     PrincipalModule,
     TodosModule,
     PartidosModule,
-    TypicodeModule
+    TypicodeModule,
+    EventosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
