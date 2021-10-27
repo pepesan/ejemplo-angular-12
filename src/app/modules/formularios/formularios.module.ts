@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MainFormComponent} from "./components/main-form/main-form.component";
-
-
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [MainFormComponent],
@@ -10,7 +9,8 @@ import {MainFormComponent} from "./components/main-form/main-form.component";
     MainFormComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class FormulariosModule { }
