@@ -11,6 +11,8 @@ import {TodosModule} from "./modules/todos/todos.module";
 import {PartidosModule} from "./modules/partidos/partidos.module";
 import {TypicodeModule} from "./modules/typicode/typicode.module";
 import {EventosModule} from "./modules/eventos/eventos.module";
+import { MainFormComponent } from './modules/formularios/components/main-form/main-form.component';
+import {FormulariosModule} from "./modules/formularios/formularios.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import {EventosModule} from "./modules/eventos/eventos.module";
     TodosModule,
     PartidosModule,
     TypicodeModule,
-    EventosModule
+    EventosModule,
+    FormulariosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
