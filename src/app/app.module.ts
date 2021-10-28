@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
 import { AboutComponent } from './components/about/about.component';
 import {CommonModule} from "./modules/common/common.module";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule} from "@angular/forms";
 import {PrincipalModule} from "./modules/principal/principal.module";
 import {TodosModule} from "./modules/todos/todos.module";
 import {PartidosModule} from "./modules/partidos/partidos.module";
@@ -13,11 +13,15 @@ import {TypicodeModule} from "./modules/typicode/typicode.module";
 import {EventosModule} from "./modules/eventos/eventos.module";
 import {FormulariosModule} from "./modules/formularios/formularios.module";
 import {ReactivosModule} from "./modules/reactivos/reactivos.module";
+import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
