@@ -22,7 +22,6 @@ import {ForbiddenNameValidator} from "./forbidden-name.directive";
   imports: [
     CommonModule,
     ReactiveFormsModule
-  ],
-  providers: [{provide: NG_VALIDATORS, useExisting: ForbiddenNameValidator, multi: true}]
+  ]
 })
 export class ReactivosModule { }
