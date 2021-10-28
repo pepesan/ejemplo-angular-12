@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-form-basico',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormBasicoComponent implements OnInit {
 
-  constructor() { }
+  public name: FormControl;
+
+  constructor() {
+    this.name = new FormControl('');
+  }
 
   ngOnInit(): void {
   }
 
+  mostrar() {
+    console.log(this.name.value);
+  }
+
+  cambia() {
+    this.name.setValue("Cambiado")
+  }
 }

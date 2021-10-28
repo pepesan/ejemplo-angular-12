@@ -30,7 +30,6 @@ import {ReactivosModule} from "./modules/reactivos/reactivos.module";
     TypicodeModule,
     EventosModule,
     FormulariosModule,
-    ReactiveFormsModule,
     ReactivosModule
   ],
   providers: [],
