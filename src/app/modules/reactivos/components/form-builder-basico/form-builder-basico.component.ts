@@ -12,7 +12,10 @@ export class FormBuilderBasicoComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.profileForm= this.fb.group({
-      firstName: ['',Validators.required,Validators.minLength(4)],
+      firstName: [
+        '',
+        [Validators.required,Validators.minLength(4)]
+      ],
       lastName: [''],
       address: this.fb.group({
         street: [''],
@@ -36,9 +39,9 @@ export class FormBuilderBasicoComponent implements OnInit {
   }
 
   muestra() {
-    console.log(this.profileForm.controls['firstName']);
-    console.log(this.profileForm.get('firstName'));
-    console.log(this.profileForm.controls['firstName'].errors);
+    //console.log(this.profileForm.controls['firstName']);
+    //console.log(this.profileForm.get('firstName'));
+    console.log(this.profileForm.controls['firstName']?.errors);
     if(this.profileForm.controls['firstName'].errors!= null){
       console.log(this.profileForm.controls['firstName'].errors['required']);
     }
