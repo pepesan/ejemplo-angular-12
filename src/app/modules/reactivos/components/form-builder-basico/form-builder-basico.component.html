@@ -10,9 +10,7 @@
     <div *ngIf="profileForm.controls['firstName'].errors?.minlength">
       Your name has only {{profileForm.controls['firstName'].errors?.minlength?.actualLength}} characters while
       the min lenght is {{profileForm.controls['firstName'].errors?.minlength?.requiredLength}}
-
     </div>
-
   </div>
   {{profileForm.get('firstName')?.errors?.minlength}}
   <label for="lastName">Last Name:</label>
