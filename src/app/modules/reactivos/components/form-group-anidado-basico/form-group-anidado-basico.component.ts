@@ -30,4 +30,13 @@ export class FormGroupAnidadoBasicoComponent implements OnInit {
     console.warn(this.profileForm.value);
     console.log(this.profileForm);
   }
+
+  cambia() {
+    this.profileForm.patchValue({
+      firstName: 'Nancy',
+      address: {
+        street: '123 Drew Street'
+      }
+    });
+  }
 }

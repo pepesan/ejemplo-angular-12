@@ -2,6 +2,14 @@
 <form class="form-group" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <label for="firstName">First Name:</label>
   <input id="firstName" class="form-control" type="text" formControlName="firstName">
+  <div *ngIf="profileForm.controls['firstName'].status=='INVALID'"
+       class="alert alert-danger">
+    <div *ngIf="profileForm.controls['firstName'].errors?.required == true">
+      Name is required.
+    </div>
+
+  </div>
+  {{profileForm.get('firstName')}}
   <label for="lastName">Last Name:</label>
   <input id="lastName" class="form-control" type="text" formControlName="lastName">
   <label for="street">Street:</label>
@@ -14,7 +22,8 @@
   <input id="zip" class="form-control" type="text" formControlName="address.zip">
   <input id="form-submit" class="btn btn-success" type="submit" value="Enviar" [disabled]="!profileForm.valid"/>
 </form>
+<button class="btn btn-success" (click)="muestra()" type="button">Muestra</button>
 <button class="btn btn-success" (click)="cambia()" type="button">Cambia</button>
 {{profileForm.valid }}
 {{profileForm.value['firstName'] }}
-
+{{profileForm.status}}
