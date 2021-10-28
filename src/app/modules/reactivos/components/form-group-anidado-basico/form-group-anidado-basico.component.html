@@ -6,13 +6,13 @@
   <input id="lastName" class="form-control" type="text" formControlName="lastName">
   <div formGroupName="address">
     <label for="street">Street:</label>
-    <input id="street" class="form-control" type="text" formControlName="address.street">
+    <input id="street" class="form-control" type="text" formControlName="street">
     <label for="city">City:</label>
-    <input id="city" class="form-control" type="text" formControlName="address.city">
+    <input id="city" class="form-control" type="text" formControlName="city">
     <label for="state">State:</label>
-    <input id="state" class="form-control" type="text" formControlName="address.state">
+    <input id="state" class="form-control" type="text" formControlName="state">
     <label for="zip">ZIP:</label>
-    <input id="zip" class="form-control" type="text" formControlName="address.zip">
+    <input id="zip" class="form-control" type="text" formControlName="zip">
   </div>
   <input id="form-submit" class="btn btn-success" type="submit" value="Enviar" [disabled]="!profileForm.valid"/>
 </form>

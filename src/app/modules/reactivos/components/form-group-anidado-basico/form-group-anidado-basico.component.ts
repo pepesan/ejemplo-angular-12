@@ -38,5 +38,6 @@ export class FormGroupAnidadoBasicoComponent implements OnInit {
         street: '123 Drew Street'
       }
     });
+    console.log(this.profileForm);
   }
 }
