@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ListadoPartidosComponent } from './listado-partidos.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 describe('ListadoPartidosComponent', () => {
   let component: ListadoPartidosComponent;
@@ -8,7 +9,13 @@ describe('ListadoPartidosComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListadoPartidosComponent ]
+      declarations: [ ListadoPartidosComponent ],
+      imports: [
+        HttpClientModule
+      ],
+      providers:[
+        HttpClient
+      ]
     })
     .compileComponents();
   });
