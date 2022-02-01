@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'nombreProyecto';
+  title: string;
+  variable: string;
+  subtitulo: string;
+
+  constructor() {
+    this.title = 'nombreProyecto';
+    this.variable = 'Valor';
+    this.subtitulo = "Mi Subtítulo";
+  }
+
 }
