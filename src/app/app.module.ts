@@ -15,6 +15,7 @@ import {FormulariosModule} from "./modules/formularios/formularios.module";
 import {ReactivosModule} from "./modules/reactivos/reactivos.module";
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MadrehijaModule } from './modules/madrehija/madrehija.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     TypicodeModule,
     EventosModule,
     FormulariosModule,
-    ReactivosModule
+    ReactivosModule,
+    MadrehijaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
