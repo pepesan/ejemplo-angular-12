@@ -14,6 +14,7 @@ export class ListadoPartidosComponent implements OnInit {
   public listadopartidosObservable: Observable<Partido[]> = this.apiClientService.getData();
   public listadoVisible: Partido[] = [];
   public listadoVisiblePromesa: Partido[] = [];
+  public listadoVisiblePromesaProcesada: Partido[] = [];
   constructor(private apiClientService: ApiClientService) { }
 
   ngOnInit(): void {
@@ -30,18 +31,7 @@ export class ListadoPartidosComponent implements OnInit {
         console.log("Promise rejected with " + JSON.stringify(error));
       }
     );    
-    let datosPromesa = this.apiClientService.getDataAsync();
-    console.log("datos promesa");
-    datosPromesa.then(
-      (data)=>{
-        console.log(data);
-      }
-    );
-    datosPromesa.catch(
-      (error)=>{
-        console.log("Promise rejected with " + JSON.stringify(error));
-      }
-    );
+    
     
     this.listadopartidosObservable.subscribe((data) => {
       console.log(data);
@@ -53,6 +43,20 @@ export class ListadoPartidosComponent implements OnInit {
 
       console.log(this.listadoVisible);
     });
+
+    let datosPromesa = this.apiClientService.getProcesedDataAsync();
+    console.log("datos promesa");
+    datosPromesa.then(
+      (data: Partido[])=>{
+        console.log(data);
+        this.listadoVisiblePromesaProcesada = data;
+      }
+    );
+    datosPromesa.catch(
+      (error)=>{
+        console.log("Promise rejected with " + JSON.stringify(error));
+      }
+    );
   }
 
 }

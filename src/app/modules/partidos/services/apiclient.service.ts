@@ -28,24 +28,35 @@ export class ApiClientService {
     return promesa;
   }  
 
-  async getProcesedDataAsync()
+  async getProcesedDataAsync(): Promise<Partido[]>
   {
-    let listadoVacio: Partido[] = []
-    let promesa = await this._httpClient.get<Observable<Partido[]>>(this.url)
+    let mipromesa = new Promise<Partido[]>(
+      (resolve,reject) => {
+        let promesa = this._httpClient.get<Observable<Partido[]>>(this.url)
         .pipe(catchError(this.handleError('get', []))).toPromise();
-    promesa.then(
-      (data: Partido[]) =>
-      {
-        return data;
+        
+
+
+        promesa.then(
+          (data: Partido[]) =>
+          {
+            console.log(data);
+            resolve(data);
+          }
+        );
+                /*
+        promesa.catch(
+          (error: any) =>{
+            console.log("Promise rejected with " + JSON.stringify(error));
+            let listadoVacio: Partido[] = []
+            return listadoVacio;
+          }
+        ); 
+        */
       }
     );
-    promesa.catch(
-      (error: any) =>{
-        console.log("Promise rejected with " + JSON.stringify(error));
-        let listadoVacio: Partido[] = []
-        return listadoVacio;
-      }
-    ); 
+    
+    return mipromesa;
   } 
  
   private handleError (operation = 'operation', result?: any) {
