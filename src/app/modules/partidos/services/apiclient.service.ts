@@ -61,7 +61,7 @@ export class ApiClientService {
   async getProcesedSubscribeDataAsync(): Promise<Partido[]>
   {
     let mipromesa = new Promise<Partido[]>(
-      (resolve,reject) => {
+      resolve => {
         let observable = this._httpClient.get<Observable<Partido[]>>(this.url)
         .pipe(catchError(this.handleError('get', [])));
         observable.subscribe((data)=>{
