@@ -13,10 +13,36 @@ export class ListadoPartidosComponent implements OnInit {
   public listado: any = this.apiClientService.getData().toPromise();
   public listadopartidosObservable: Observable<Partido[]> = this.apiClientService.getData();
   public listadoVisible: Partido[] = [];
+  public listadoVisiblePromesa: Partido[] = [];
   constructor(private apiClientService: ApiClientService) { }
 
   ngOnInit(): void {
     // console.log(this.listado);
+    let listadoPromesa = this.listadopartidosObservable.toPromise();
+    listadoPromesa.then(
+      (data) =>
+      {
+        this.listadoVisiblePromesa = data;
+      }
+    );
+    listadoPromesa.catch(
+      (error) =>{
+        console.log("Promise rejected with " + JSON.stringify(error));
+      }
+    );    
+    let datosPromesa = this.apiClientService.getDataAsync();
+    console.log("datos promesa");
+    datosPromesa.then(
+      (data)=>{
+        console.log(data);
+      }
+    );
+    datosPromesa.catch(
+      (error)=>{
+        console.log("Promise rejected with " + JSON.stringify(error));
+      }
+    );
+    
     this.listadopartidosObservable.subscribe((data) => {
       console.log(data);
       console.log(data.length);

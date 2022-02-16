@@ -21,6 +21,12 @@ export class ApiClientService {
     return this._httpClient.get<Observable<Partido[]>>(this.url)
         .pipe(catchError(this.handleError('get', [])));
   }
+  async getDataAsync()
+  {
+    let promesa = await this._httpClient.get<Observable<Partido[]>>(this.url)
+        .pipe(catchError(this.handleError('get', []))).toPromise();
+    return promesa;
+  }  
   private handleError (operation = 'operation', result?: any) {
     return (error: any): any[] => {
       // TODO: send the error to remote logging infrastructure
