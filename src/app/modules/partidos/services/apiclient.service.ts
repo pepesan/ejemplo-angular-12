@@ -57,6 +57,20 @@ export class ApiClientService {
     );
     
     return mipromesa;
+  }
+  async getProcesedSubscribeDataAsync(): Promise<Partido[]>
+  {
+    let mipromesa = new Promise<Partido[]>(
+      (resolve,reject) => {
+        let observable = this._httpClient.get<Observable<Partido[]>>(this.url)
+        .pipe(catchError(this.handleError('get', [])));
+        observable.subscribe((data)=>{
+          resolve(data);
+        });
+      }
+    );
+    
+    return mipromesa;
   } 
  
   private handleError (operation = 'operation', result?: any) {
