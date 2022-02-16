@@ -44,15 +44,15 @@ export class ApiClientService {
             resolve(data);
           }
         );
-                /*
+        
         promesa.catch(
           (error: any) =>{
             console.log("Promise rejected with " + JSON.stringify(error));
             let listadoVacio: Partido[] = []
-            return listadoVacio;
+            reject(listadoVacio);
           }
         ); 
-        */
+        
       }
     );
     
