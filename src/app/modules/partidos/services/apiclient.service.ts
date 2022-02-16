@@ -64,7 +64,7 @@ export class ApiClientService {
       resolve => {
         let observable = this._httpClient.get<Observable<Partido[]>>(this.url)
         .pipe(catchError(this.handleError('get', [])));
-        observable.subscribe((data)=>{
+        observable.subscribe((data: Partido[])=>{
           resolve(data);
         });
       }
