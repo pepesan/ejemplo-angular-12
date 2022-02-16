@@ -60,7 +60,7 @@ export class ListadoPartidosComponent implements OnInit {
       }
     );
     let datosSubscribe = this.apiClientService.getProcesedSubscribeDataAsync();
-    console.log("datos promesa");
+    console.log("datos subscribe");
     datosSubscribe.then(
       (data: Partido[])=>{
         console.log(data);
