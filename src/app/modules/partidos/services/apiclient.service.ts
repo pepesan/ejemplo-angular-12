@@ -21,12 +21,33 @@ export class ApiClientService {
     return this._httpClient.get<Observable<Partido[]>>(this.url)
         .pipe(catchError(this.handleError('get', [])));
   }
-  async getDataAsync()
+  async getDataAsync(): Promise<Partido[]>
   {
     let promesa = await this._httpClient.get<Observable<Partido[]>>(this.url)
         .pipe(catchError(this.handleError('get', []))).toPromise();
     return promesa;
   }  
+
+  async getProcesedDataAsync()
+  {
+    let listadoVacio: Partido[] = []
+    let promesa = await this._httpClient.get<Observable<Partido[]>>(this.url)
+        .pipe(catchError(this.handleError('get', []))).toPromise();
+    promesa.then(
+      (data: Partido[]) =>
+      {
+        return data;
+      }
+    );
+    promesa.catch(
+      (error: any) =>{
+        console.log("Promise rejected with " + JSON.stringify(error));
+        let listadoVacio: Partido[] = []
+        return listadoVacio;
+      }
+    ); 
+  } 
+ 
   private handleError (operation = 'operation', result?: any) {
     return (error: any): any[] => {
       // TODO: send the error to remote logging infrastructure
