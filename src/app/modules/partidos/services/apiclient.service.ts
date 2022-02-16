@@ -28,7 +28,7 @@ export class ApiClientService {
     return promesa;
   }  
 
-  async getProcesedDataAsync()
+  async getProcesedDataAsync(): Partido[]
   {
     let listadoVacio: Partido[] = []
     let promesa = await this._httpClient.get<Observable<Partido[]>>(this.url)
@@ -36,17 +36,36 @@ export class ApiClientService {
     promesa.then(
       (data: Partido[]) =>
       {
-        return data;
+        listadoVacio= data;
       }
     );
     promesa.catch(
       (error: any) =>{
         console.log("Promise rejected with " + JSON.stringify(error));
-        let listadoVacio: Partido[] = []
-        return listadoVacio;
       }
     ); 
+    return listadoVacio;
   } 
+  /*
+  async getProcesedDataWithSubscribeAsync(): Promise<Partido[]>
+  {
+    return new Promise((resolve, reject) => {
+      let observable = this._httpClient.get<Observable<Partido[]>>(this.url)
+      .pipe(catchError((error, result)=>{
+        reject(error);
+      }))
+      
+      observable.subscribe((data) =>{
+        resolve(data);
+      })
+      
+      
+    }
+  } 
+  */
+  private devuelveError(operation = 'operation', result?: any){
+
+  }
  
   private handleError (operation = 'operation', result?: any) {
     return (error: any): any[] => {
