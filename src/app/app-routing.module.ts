@@ -12,6 +12,8 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'subrutas', loadChildren:
       () => import('./modules/subrutas/subrutas.module').then(m => m.SubrutasModule) },
+  { path: '/submodulo', loadChildren:
+      () => import('./modules/submodulo/submodulo.module').then(m => m.SubmoduloModule) },
   { path: '**', component: PageNotFoundComponent },
 ];
 
