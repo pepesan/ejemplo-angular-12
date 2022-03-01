@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'listado', component: ListadoPartidosComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'subrutas', loadChildren: () => import('./modules/subrutas/subrutas.module').then(m => m.SubrutasModule) },
+  { path: 'subrutas', loadChildren:
+      () => import('./modules/subrutas/subrutas.module').then(m => m.SubrutasModule) },
   { path: '**', component: PageNotFoundComponent },
 ];
 

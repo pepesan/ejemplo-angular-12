@@ -15,13 +15,15 @@ import {FormulariosModule} from "./modules/formularios/formularios.module";
 import {ReactivosModule} from "./modules/reactivos/reactivos.module";
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,
