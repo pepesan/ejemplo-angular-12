@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
 import { Validators } from '@angular/forms';
 @Component({
   selector: 'app-form-builder-basico',
@@ -8,9 +8,9 @@ import { Validators } from '@angular/forms';
 })
 export class FormBuilderBasicoComponent implements OnInit {
 
-  public profileForm: FormGroup;
+  public profileForm: UntypedFormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.profileForm= this.fb.group({
       firstName: [
         '',

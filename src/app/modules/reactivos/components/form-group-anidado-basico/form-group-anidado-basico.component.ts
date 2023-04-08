@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-form-group-anidado-basico',
@@ -8,17 +8,17 @@ import {FormControl, FormGroup} from "@angular/forms";
 })
 export class FormGroupAnidadoBasicoComponent implements OnInit {
 
-  public profileForm: FormGroup;
+  public profileForm: UntypedFormGroup;
 
   constructor() {
-    this.profileForm = new FormGroup({
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
-      address: new FormGroup({
-        street: new FormControl(''),
-        city: new FormControl(''),
-        state: new FormControl(''),
-        zip: new FormControl('')
+    this.profileForm = new UntypedFormGroup({
+      firstName: new UntypedFormControl(''),
+      lastName: new UntypedFormControl(''),
+      address: new UntypedFormGroup({
+        street: new UntypedFormControl(''),
+        city: new UntypedFormControl(''),
+        state: new UntypedFormControl(''),
+        zip: new UntypedFormControl('')
       })
     });
   }

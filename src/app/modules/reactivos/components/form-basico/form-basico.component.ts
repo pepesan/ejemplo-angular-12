@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-form-basico',
@@ -8,10 +8,10 @@ import { FormControl } from '@angular/forms';
 })
 export class FormBasicoComponent implements OnInit {
 
-  public name: FormControl;
+  public name: UntypedFormControl;
 
   constructor() {
-    this.name = new FormControl('');
+    this.name = new UntypedFormControl('');
   }
 
   ngOnInit(): void {

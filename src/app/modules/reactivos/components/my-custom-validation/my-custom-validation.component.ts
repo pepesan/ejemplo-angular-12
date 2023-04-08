@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup, Validators} from "@angular/forms";
 import {ForbiddenNameValidator} from "../../forbidden-name.directive";
 
 @Component({
@@ -8,10 +8,10 @@ import {ForbiddenNameValidator} from "../../forbidden-name.directive";
   styleUrls: ['./my-custom-validation.component.sass']
 })
 export class MyCustomValidationComponent implements OnInit {
-  public profileForm: FormGroup;
+  public profileForm: UntypedFormGroup;
   constructor() {
-    this.profileForm = new FormGroup({
-      name: new FormControl('', [
+    this.profileForm = new UntypedFormGroup({
+      name: new UntypedFormControl('', [
         Validators.required,
         ForbiddenNameValidator(/bob/i) // <-- Here's how you pass in the custom validator.
       ]),
