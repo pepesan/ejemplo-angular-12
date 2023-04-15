@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,6 +20,7 @@ import { PropiedadesComponent } from './components/propiedades/propiedades.compo
 import { UsaPropiedadesComponent } from './components/usa-propiedades/usa-propiedades.component';
 import {MadrehijaModule} from "./modules/madrehija/madrehija.module";
 import { DirectivasComponent } from './components/directivas/directivas.component';
+import { PipesComponent } from './components/pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { DirectivasComponent } from './components/directivas/directivas.componen
     NosotrosComponent,
     PropiedadesComponent,
     UsaPropiedadesComponent,
-    DirectivasComponent
+    DirectivasComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

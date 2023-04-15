@@ -9,6 +9,7 @@ import {MadreComponent} from "./modules/madrehija/madre/madre.component";
 import {MainFormComponent} from "./modules/formularios/components/main-form/main-form.component";
 import {PrincipalEventosComponent} from "./modules/eventos/components/principal-eventos/principal-eventos.component";
 import {DirectivasComponent} from "./components/directivas/directivas.component";
+import {PipesComponent} from "./components/pipes/pipes.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'listado', component: ListadoPartidosComponent },
   { path: 'propiedades', component: UsaPropiedadesComponent },
   { path: 'directivas', component: DirectivasComponent },
+  { path: 'pipes', component: PipesComponent },
   { path: 'eventos', component: PrincipalEventosComponent },
   { path: 'madre', component: MadreComponent },
   { path: 'form', component: MainFormComponent },
