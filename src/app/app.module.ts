@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PropiedadesComponent } from './components/propiedades/propiedades.component';
 import { UsaPropiedadesComponent } from './components/usa-propiedades/usa-propiedades.component';
+import {MadrehijaModule} from "./modules/madrehija/madrehija.module";
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { UsaPropiedadesComponent } from './components/usa-propiedades/usa-propie
     TypicodeModule,
     EventosModule,
     FormulariosModule,
-    ReactivosModule
+    ReactivosModule,
+    MadrehijaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
