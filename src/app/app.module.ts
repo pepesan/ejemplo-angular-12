@@ -16,6 +16,8 @@ import {ReactivosModule} from "./modules/reactivos/reactivos.module";
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { PropiedadesComponent } from './components/propiedades/propiedades.component';
+import { UsaPropiedadesComponent } from './components/usa-propiedades/usa-propiedades.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
     AboutComponent,
     HomeComponent,
     PageNotFoundComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    PropiedadesComponent,
+    UsaPropiedadesComponent
   ],
   imports: [
     BrowserModule,
