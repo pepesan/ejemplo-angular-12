@@ -1,0 +1,21 @@
+<div>
+  <h2>Ejemplos de directivas</h2>
+  <p *ngIf="booleano">
+    El booleano es true
+  </p>
+  <p *ngIf="!booleano">
+    El booleano es false
+  </p>
+  <ul>
+    <li *ngFor="let item of datos">
+      {{item.text}}
+    </li>
+  </ul>
+  <div [ngSwitch]="currentItem">
+    <p *ngSwitchCase="'stout'">Stout</p>
+    <p *ngSwitchCase="'stin'">Stin</p>
+    <!-- . . . -->
+    <p *ngSwitchDefault>default</p>
+  </div>
+  <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+</div>

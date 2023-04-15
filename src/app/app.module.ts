@@ -19,6 +19,7 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { PropiedadesComponent } from './components/propiedades/propiedades.component';
 import { UsaPropiedadesComponent } from './components/usa-propiedades/usa-propiedades.component';
 import {MadrehijaModule} from "./modules/madrehija/madrehija.module";
+import { DirectivasComponent } from './components/directivas/directivas.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {MadrehijaModule} from "./modules/madrehija/madrehija.module";
     PageNotFoundComponent,
     NosotrosComponent,
     PropiedadesComponent,
-    UsaPropiedadesComponent
+    UsaPropiedadesComponent,
+    DirectivasComponent
   ],
   imports: [
     BrowserModule,
