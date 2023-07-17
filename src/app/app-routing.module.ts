@@ -10,10 +10,12 @@ import {MainFormComponent} from "./modules/formularios/components/main-form/main
 import {PrincipalEventosComponent} from "./modules/eventos/components/principal-eventos/principal-eventos.component";
 import {DirectivasComponent} from "./components/directivas/directivas.component";
 import {PipesComponent} from "./components/pipes/pipes.component";
+import {SignalsComponent} from "./components/signals/signals.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'signals', component: SignalsComponent },
   { path: 'listado', component: ListadoPartidosComponent },
   { path: 'propiedades', component: UsaPropiedadesComponent },
   { path: 'directivas', component: DirectivasComponent },

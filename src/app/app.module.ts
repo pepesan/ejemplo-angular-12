@@ -21,6 +21,7 @@ import { UsaPropiedadesComponent } from './components/usa-propiedades/usa-propie
 import {MadrehijaModule} from "./modules/madrehija/madrehija.module";
 import { DirectivasComponent } from './components/directivas/directivas.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import { SignalsComponent } from './components/signals/signals.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PipesComponent } from './components/pipes/pipes.component';
     PropiedadesComponent,
     UsaPropiedadesComponent,
     DirectivasComponent,
-    PipesComponent
+    PipesComponent,
+    SignalsComponent
   ],
   imports: [
     BrowserModule,
