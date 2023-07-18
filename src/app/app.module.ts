@@ -23,6 +23,7 @@ import { DirectivasComponent } from './components/directivas/directivas.componen
 import { PipesComponent } from './components/pipes/pipes.component';
 import { SignalsComponent } from './components/signals/signals.component';
 import { MiPipe } from './pipes/mi-pipe.pipe';
+import { MiaDirective } from './directives/mia.directive';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MiPipe } from './pipes/mi-pipe.pipe';
     DirectivasComponent,
     PipesComponent,
     SignalsComponent,
-    MiPipe
+    MiPipe,
+    MiaDirective
   ],
   imports: [
     BrowserModule,
