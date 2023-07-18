@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Dato} from "../propiedades/dato";
 
 @Component({
   selector: 'app-usa-propiedades',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class UsaPropiedadesComponent {
   valor: string = "Valor"
+  dato: Dato = new Dato();
 }

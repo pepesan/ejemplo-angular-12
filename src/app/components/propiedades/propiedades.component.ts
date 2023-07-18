@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {Dato} from "./dato";
 
 @Component({
   selector: 'app-propiedades',
@@ -8,5 +9,6 @@ import {Component, Input} from '@angular/core';
 export class PropiedadesComponent {
 
   @Input() parametro?: string;
-
-}
+  @Input() parametro2?: number;
+  @Input() dato?: Dato;
+ }
