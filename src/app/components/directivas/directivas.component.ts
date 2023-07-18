@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./directivas.component.sass']
 })
 export class DirectivasComponent {
-  booleano: boolean = true;
+  booleano: boolean = false;
 
   datos: any []= [
     {"text": "valor 1"},
@@ -16,7 +16,7 @@ export class DirectivasComponent {
 
   ];
 
-  currentItem: string = "stout";
+  currentItem: string = "stin";
 
   isSpecial: boolean = true;
 

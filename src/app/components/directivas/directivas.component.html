@@ -7,8 +7,8 @@
     El booleano es false
   </p>
   <ul>
-    <li *ngFor="let item of datos">
-      {{item.text}}
+    <li *ngFor="let item of datos; index as i">
+      {{i}}: {{item.text}}
     </li>
   </ul>
   <div [ngSwitch]="currentItem">
@@ -17,5 +17,7 @@
     <!-- . . . -->
     <p *ngSwitchDefault>default</p>
   </div>
-  <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+  <div [ngClass]="isSpecial ? 'special' : ''">
+    This div is special
+  </div>
 </div>

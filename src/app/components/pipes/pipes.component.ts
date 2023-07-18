@@ -14,5 +14,7 @@ export class PipesComponent {
   };
 
   porcentaje :number = 0.1257;
-
+  fecha: Date = new Date();
+  // fecha: Date = new Date(2023, 6, 15, 12, 30, 15);
+  numero: number = 2;
 }
