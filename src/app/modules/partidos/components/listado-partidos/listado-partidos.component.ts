@@ -29,6 +29,21 @@ export class ListadoPartidosComponent implements OnInit, OnDestroy {
 
     // Coloco los datos iniciales al listado visible
     this.listadoVisible = [];
+    // me subscribo al observable y guardo la subscripción
+    this.listadopartidosObservableSubscription =
+      this.listadopartidosObservable.subscribe((data: Partido[]): void => {
+        console.log(data);
+        console.log(data.length);
+        // pasar los datos una vez recibidos al listado visible
+        // poco a poco
+        data.forEach( (value : Partido) =>
+          this.listadoVisible.push(value)
+        );
+        // del tirón
+        this.listadoVisible = data;
+
+        console.log(this.listadoVisible);
+      });
   }
 
   ngOnInit(): void {
@@ -46,20 +61,7 @@ export class ListadoPartidosComponent implements OnInit, OnDestroy {
       }
     );
 
-    // me subscribo al observable y guardo la subscripción
-    this.listadopartidosObservableSubscription = this.listadopartidosObservable.subscribe((data: Partido[]): void => {
-      console.log(data);
-      console.log(data.length);
-      // pasar los datos una vez recibidos al listado visible
-      // poco a poco
-      data.forEach( (value : Partido) =>
-        this.listadoVisible.push(value)
-      );
-      // del tirón
-      this.listadoVisible = data;
 
-      console.log(this.listadoVisible);
-    });
 
     let datosPromesa = this.apiClientService.getProcesedDataAsync();
     console.log("datos promesa");
@@ -90,9 +92,12 @@ export class ListadoPartidosComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     // unsubscribe
+
     if(this.listadopartidosObservableSubscription){
       this.listadopartidosObservableSubscription.unsubscribe();
     }
+
+
   }
 
 }
