@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {ApiClientService} from "./services/apiclient.service";
 import { ListadoPartidosComponent } from './components/listado-partidos/listado-partidos.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,7 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [ApiClientService],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    NgOptimizedImage
   ],
   exports:[
     ListadoPartidosComponent
