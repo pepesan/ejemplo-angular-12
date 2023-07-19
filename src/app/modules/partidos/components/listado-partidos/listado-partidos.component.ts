@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ApiClientService} from "../../services/apiclient.service";
 import {Partido} from "../../models/partido";
-import {Observable} from "rxjs";
+import {Observable, Subscription} from "rxjs";
 
 @Component({
   selector: 'app-listado-partidos',
@@ -13,6 +13,7 @@ export class ListadoPartidosComponent implements OnInit, OnDestroy {
   // Promesa que pasamos a la vista para cuando dispongamos del dato pintarlo por pantalla
   public listado: Promise<Partido[]> ;
   public listadopartidosObservable: Observable<Partido[]>;
+  public listadopartidosObservableSubscription: Subscription;
   public listadoVisible: Partido[];
   public listadoVisiblePromesa: Partido[] = [];
   public listadoVisiblePromesaProcesada: Partido[] = [];
@@ -45,8 +46,8 @@ export class ListadoPartidosComponent implements OnInit, OnDestroy {
       }
     );
 
-    // me subscribo al observable
-    this.listadopartidosObservable.subscribe((data: Partido[]): void => {
+    // me subscribo al observable y guardo la subscripción
+    this.listadopartidosObservableSubscription = this.listadopartidosObservable.subscribe((data: Partido[]): void => {
       console.log(data);
       console.log(data.length);
       // pasar los datos una vez recibidos al listado visible
@@ -89,7 +90,9 @@ export class ListadoPartidosComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy(): void {
     // unsubscribe
-    // this.listadopartidosObservable.
+    if(this.listadopartidosObservableSubscription){
+      this.listadopartidosObservableSubscription.unsubscribe();
+    }
   }
 
 }
