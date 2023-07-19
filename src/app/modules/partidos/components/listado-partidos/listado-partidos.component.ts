@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ApiClientService} from "../../services/apiclient.service";
 import {Partido} from "../../models/partido";
 import {Observable} from "rxjs";
@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
   templateUrl: './listado-partidos.component.html',
   styleUrls: ['./listado-partidos.component.sass']
 })
-export class ListadoPartidosComponent implements OnInit {
+export class ListadoPartidosComponent implements OnInit, OnDestroy {
 
   // Promesa que pasamos a la vista para cuando dispongamos del dato pintarlo por pantalla
   public listado: Promise<Partido[]> ;
@@ -86,6 +86,10 @@ export class ListadoPartidosComponent implements OnInit {
         console.log("Promise rejected with " + JSON.stringify(error));
       }
     );
+  }
+  ngOnDestroy(): void {
+    // unsubscribe
+    // this.listadopartidosObservable.
   }
 
 }

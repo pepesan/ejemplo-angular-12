@@ -13,14 +13,27 @@ export class PrincipalEventosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  clicked(event: Event) {
+
+  clicked(event: MouseEvent) {
     event.preventDefault();
     console.log(event);
+    console.log(event.target);
     console.log("pulsado");
   }
 
   onEnter(value: string) {
     this.value = value;
+    console.log(this.value);
+  }
+
+  onEnterKeyBoard(event: Event) {
+    let kbEvent = event as KeyboardEvent;
+    // this.value = event.value;
+    console.log(this.value);
+  }
+
+  onEnterKeyBoard2(elemento: HTMLInputElement) {
+    // this.value = event.value;
     console.log(this.value);
   }
 }
