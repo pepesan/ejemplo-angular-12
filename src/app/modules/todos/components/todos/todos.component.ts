@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TodoService} from "../../services/todo/todo.service"
+import {Dato} from "../../domain/dato";
 
 @Component({
   selector: 'app-todos',
@@ -7,24 +8,24 @@ import {TodoService} from "../../services/todo/todo.service"
   styleUrls: ['./todos.component.sass']
 })
 export class TodosComponent implements OnInit {
-  public todos: any[] = [];
-  public todo: any;
-  public dato: any = {};
+  public todos: Dato[] = [];
+  public todo: Dato;
+  public dato: Dato = new Dato("");
 
   constructor(private todoService:TodoService) { }
 
   ngOnInit(): void {
-    this.todo = { text: ""}
+    this.todo = new Dato();
     this.todos=[
-      {text:"hacer la compra"},
-      {text: "revisar el coche"}
+      new Dato("hacer la compra"),
+      new Dato("revisar el coche")
     ];
     this.dato = this.todoService.cogeDatos();
     console.log(this.dato);
   }
 
   addTodo() {
-    let mitodo={text:this.todo.text};
+    let mitodo: Dato=new Dato(this.todo.text);
     this.todos.push(mitodo);
     this.todo.text = "";
   }
