@@ -11,8 +11,8 @@ import { environment } from '../../../../environments/environment';
 export class ApiClientService {
 
   private listado: Partido[] = [];
-  private url : string = 'https://cursosdedesarrollo.com/pactometro/resultados.json';
-  // private url : string = environment.baseUrl;
+  // private url : string = 'https://cursosdedesarrollo.com/pactometro/resultados.json';
+  private url : string = environment.baseUrl;
 
   constructor(private _httpClient: HttpClient) {
     console.log("cargado el cliente HTTP");

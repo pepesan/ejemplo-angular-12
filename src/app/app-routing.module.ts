@@ -12,6 +12,9 @@ import {DirectivasComponent} from "./components/directivas/directivas.component"
 import {PipesComponent} from "./components/pipes/pipes.component";
 import {SignalsComponent} from "./components/signals/signals.component";
 import {TodosComponent} from "./components/todos/todos.component";
+import {
+  FormBuilderBasicoComponent
+} from "./modules/reactivos/components/form-builder-basico/form-builder-basico.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -25,6 +28,8 @@ const routes: Routes = [
   { path: 'eventos', component: PrincipalEventosComponent },
   { path: 'madre', component: MadreComponent },
   { path: 'form', component: MainFormComponent },
+  { path: 'formreactivo', component: FormBuilderBasicoComponent },
+
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'subrutas', loadChildren:

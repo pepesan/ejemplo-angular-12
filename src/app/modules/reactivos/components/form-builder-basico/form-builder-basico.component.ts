@@ -24,6 +24,10 @@ export class FormBuilderBasicoComponent implements OnInit {
         zip: ['']
       }),
     });
+    // lo marcamos como no tocado
+    this.profileForm.markAsUntouched();
+    // lo marcamos como prístino
+    this.profileForm.markAsPristine();
   }
 
   ngOnInit(): void {
@@ -36,6 +40,12 @@ export class FormBuilderBasicoComponent implements OnInit {
   onSubmit() {
     console.warn(this.profileForm.value);
     console.log(this.profileForm);
+    // reseteamos los datos
+    this.profileForm.reset();
+    // lo marcamos como no tocado
+    this.profileForm.markAsUntouched();
+    // lo marcamos como prístino
+    this.profileForm.markAsPristine();
   }
 
   muestra() {
