@@ -9,7 +9,7 @@ import {Dato} from "../../domain/dato";
 })
 export class TodosComponent implements OnInit {
   public todos: Dato[] = [];
-  public todo: Dato;
+  public todo: Dato = new Dato();
   public dato: Dato = new Dato("");
 
   constructor(private todoService:TodoService) { }

@@ -11,6 +11,7 @@ import {PrincipalEventosComponent} from "./modules/eventos/components/principal-
 import {DirectivasComponent} from "./components/directivas/directivas.component";
 import {PipesComponent} from "./components/pipes/pipes.component";
 import {SignalsComponent} from "./components/signals/signals.component";
+import {TodosComponent} from "./components/todos/todos.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'propiedades', component: UsaPropiedadesComponent },
   { path: 'directivas', component: DirectivasComponent },
   { path: 'pipes', component: PipesComponent },
+  { path: 'services', component: TodosComponent },
   { path: 'eventos', component: PrincipalEventosComponent },
   { path: 'madre', component: MadreComponent },
   { path: 'form', component: MainFormComponent },
