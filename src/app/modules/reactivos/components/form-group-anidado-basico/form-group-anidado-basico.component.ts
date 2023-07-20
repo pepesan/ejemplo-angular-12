@@ -9,7 +9,7 @@ import {FormGroup, UntypedFormControl, UntypedFormGroup, Validators} from "@angu
 export class FormGroupAnidadoBasicoComponent implements OnInit {
 
   public profileForm: UntypedFormGroup;
-  public typedProfileForm: FormGroup;
+  //public typedProfileForm: FormGroup;
 
   constructor() {
     this.profileForm = new UntypedFormGroup({
@@ -22,16 +22,16 @@ export class FormGroupAnidadoBasicoComponent implements OnInit {
         zip: new UntypedFormControl('')
       })
     });
-    this.typedProfileForm = new FormGroup({
-      firstName: new UntypedFormControl(''),
-      lastName: new UntypedFormControl(''),
-      address: new UntypedFormGroup({
-        street: new UntypedFormControl(''),
-        city: new UntypedFormControl(''),
-        state: new UntypedFormControl(''),
-        zip: new UntypedFormControl('')
-      })
-    });
+    // this.typedProfileForm = new FormGroup({
+    //   firstName: new UntypedFormControl(''),
+    //   lastName: new UntypedFormControl(''),
+    //   address: new UntypedFormGroup({
+    //     street: new UntypedFormControl(''),
+    //     city: new UntypedFormControl(''),
+    //     state: new UntypedFormControl(''),
+    //     zip: new UntypedFormControl('')
+    //   })
+    // });
   }
   ngOnInit(): void {
   }

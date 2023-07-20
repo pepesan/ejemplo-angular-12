@@ -7,7 +7,7 @@ import {UntypedFormGroup, UntypedFormControl, FormGroup, FormControl, Validators
 })
 export class FormGroupBasicoComponent implements OnInit {
   public profileForm: UntypedFormGroup;
-  public typedProfileForm: UntypedFormGroup;
+  //public typedProfileForm: UntypedFormGroup;
 
 
   constructor() {
@@ -15,10 +15,10 @@ export class FormGroupBasicoComponent implements OnInit {
       firstName: new UntypedFormControl('',[Validators.required,Validators.minLength(4)]),
       lastName: new UntypedFormControl(''),
     });
-    this.typedProfileForm = new FormGroup({
-      firstName: new FormControl('',[Validators.required,Validators.minLength(4)]),
-      lastName: new FormControl(''),
-    });
+    // this.typedProfileForm = new FormGroup({
+    //   firstName: new FormControl('',[Validators.required,Validators.minLength(4)]),
+    //   lastName: new FormControl(''),
+    // });
   }
 
   ngOnInit(): void {
@@ -28,9 +28,9 @@ export class FormGroupBasicoComponent implements OnInit {
     console.warn(this.profileForm.value);
     console.warn(this.profileForm.value.firstName);
   }
-
-  onSubmitTyped() {
-    console.warn(this.typedProfileForm.value);
-    console.warn(this.typedProfileForm.value.firstName);
-  }
+  //
+  // onSubmitTyped() {
+  //   console.warn(this.typedProfileForm.value);
+  //   console.warn(this.typedProfileForm.value.firstName);
+  // }
 }

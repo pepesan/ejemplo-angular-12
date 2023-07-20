@@ -9,7 +9,7 @@ import { Validators } from '@angular/forms';
 export class FormBuilderBasicoComponent implements OnInit {
 
   public profileForm: UntypedFormGroup;
-  public typedProfileForm: FormGroup;
+  //public typedProfileForm: FormGroup;
 
 
   constructor(private fb: UntypedFormBuilder, private tfb: FormBuilder) {
@@ -31,24 +31,24 @@ export class FormBuilderBasicoComponent implements OnInit {
     // lo marcamos como prístino
     this.profileForm.markAsPristine();
 
-    // Typed
-    this.typedProfileForm= this.tfb.group({
-      firstName: [
-        '',
-        [Validators.required,Validators.minLength(4)]
-      ],
-      lastName: [''],
-      address: this.fb.group({
-        street: [''],
-        city: [''],
-        state: [''],
-        zip: ['']
-      }),
-    });
-    // lo marcamos como no tocado
-    this.typedProfileForm.markAsUntouched();
-    // lo marcamos como prístino
-    this.typedProfileForm.markAsPristine();
+    // // Typed
+    // this.typedProfileForm= this.tfb.group({
+    //   firstName: [
+    //     '',
+    //     [Validators.required,Validators.minLength(4)]
+    //   ],
+    //   lastName: [''],
+    //   address: this.fb.group({
+    //     street: [''],
+    //     city: [''],
+    //     state: [''],
+    //     zip: ['']
+    //   }),
+    // });
+    // // lo marcamos como no tocado
+    // this.typedProfileForm.markAsUntouched();
+    // // lo marcamos como prístino
+    // this.typedProfileForm.markAsPristine();
   }
 
   ngOnInit(): void {

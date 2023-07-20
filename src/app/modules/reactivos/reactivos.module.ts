@@ -7,17 +7,19 @@ import { FormGroupAnidadoBasicoComponent } from './components/form-group-anidado
 import { FormBuilderBasicoComponent } from './components/form-builder-basico/form-builder-basico.component';
 import { MyCustomValidationComponent } from './components/my-custom-validation/my-custom-validation.component';
 import {ForbiddenNameValidator} from "./forbidden-name.directive";
+import { FormValidatePasswordsComponent } from './components/form-validate-passwords/form-validate-passwords.component';
 
 
 
 @NgModule({
-  declarations: [FormBasicoComponent, FormGroupBasicoComponent, FormGroupAnidadoBasicoComponent, FormBuilderBasicoComponent, MyCustomValidationComponent],
+  declarations: [FormBasicoComponent, FormGroupBasicoComponent, FormGroupAnidadoBasicoComponent, FormBuilderBasicoComponent, MyCustomValidationComponent, FormValidatePasswordsComponent],
   exports: [
     FormBasicoComponent,
     FormGroupBasicoComponent,
     FormGroupAnidadoBasicoComponent,
     FormBuilderBasicoComponent,
-    MyCustomValidationComponent
+    MyCustomValidationComponent,
+    FormValidatePasswordsComponent
   ],
   imports: [
     CommonModule,

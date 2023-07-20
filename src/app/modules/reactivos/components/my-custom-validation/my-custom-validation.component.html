@@ -1,3 +1,4 @@
+<h2>Formulario con validación custom</h2>
 <form class="form-group" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <input type="text" id="name" name="name" class="form-control" formControlName="name"/>
   <div *ngIf="profileForm.controls['name']?.invalid && profileForm.controls['name'].status=='INVALID'"

@@ -22,14 +22,16 @@ export class MyCustomValidationComponent implements OnInit {
   }
 
   onSubmit() {
-
+    console.log(this.profileForm.value)
   }
 
   muestra() {
     //console.log(this.profileForm.controls['firstName']);
     //console.log(this.profileForm.get('firstName'));
-    console.log(this.profileForm.controls['name']?.errors);
-    console.log(this.profileForm.controls['name'].errors?.name);
+    console.log(this.profileForm.value)
+    console.log("errores: "+ this.profileForm.controls['name']?.errors);
+    console.log("error: require: "+ this.profileForm.controls['name'].errors?.required);
+    console.log("error: forbiddenName: "+ this.profileForm.controls['name'].errors?.forbiddenName);
 
   }
 }
