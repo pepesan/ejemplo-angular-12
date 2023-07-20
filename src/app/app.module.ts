@@ -29,6 +29,10 @@ import {TodoService} from "./components/todos/todo.service";
 import { EjerciciosComponent } from './components/ejercicios/ejercicios.component';
 import {EjerciciosModule} from "./modules/ejercicios/ejercicios.module";
 import { ReactivosComponent } from './components/reactivos/reactivos.component';
+import { ListComponent } from './components/list/list.component';
+import { DetailComponent } from './components/detail/detail.component';
+import {OtrasrutasModule} from "./modules/otrasrutas/otrasrutas.module";
+import {ListDetailModule} from "./modules/list-detail/list-detail.module";
 
 @NgModule({
   declarations: [
@@ -46,7 +50,9 @@ import { ReactivosComponent } from './components/reactivos/reactivos.component';
     MiaDirective,
     TodosComponent,
     EjerciciosComponent,
-    ReactivosComponent
+    ReactivosComponent,
+    ListComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +67,9 @@ import { ReactivosComponent } from './components/reactivos/reactivos.component';
     FormulariosModule,
     ReactivosModule,
     MadrehijaModule,
-    EjerciciosModule
+    EjerciciosModule,
+    OtrasrutasModule,
+    ListDetailModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]

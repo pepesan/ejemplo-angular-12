@@ -17,6 +17,8 @@ import {
 } from "./modules/reactivos/components/form-builder-basico/form-builder-basico.component";
 import {EjerciciosComponent} from "./components/ejercicios/ejercicios.component";
 import {ReactivosComponent} from "./components/reactivos/reactivos.component";
+import {ListComponent} from "./components/list/list.component";
+import {DetailComponent} from "./components/detail/detail.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -32,13 +34,22 @@ const routes: Routes = [
   { path: 'form', component: MainFormComponent },
   { path: 'formreactivo', component: ReactivosComponent },
   { path: 'ejercicios', component: EjerciciosComponent },
-
+  { path: 'listadodetalle', component: ListComponent },
+  { path: 'detalle/:id', component: DetailComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'subrutas', loadChildren:
-      () => import('./modules/subrutas/subrutas.module').then(m => m.SubrutasModule) },
+      () => import('./modules/subrutas/subrutas.module')
+        .then(m => m.SubrutasModule) },
+  { path: 'otrasrutas', loadChildren:
+      () => import('./modules/otrasrutas/otrasrutas.module')
+        .then(m => m.OtrasrutasModule) },
+  { path: 'modulo-lista-detalle', loadChildren:
+      () => import('./modules/list-detail/list-detail.module')
+        .then(m => m.ListDetailModule) },
   { path: 'submodulo', loadChildren:
-      () => import('./modules/submodulo/submodulo.module').then(m => m.SubmoduloModule) },
+      () => import('./modules/submodulo/submodulo.module')
+        .then(m => m.SubmoduloModule) },
 
   { path: '**', component: PageNotFoundComponent },
 ];

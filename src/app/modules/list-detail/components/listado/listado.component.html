@@ -1,0 +1,9 @@
+<div>
+  <h3>Listado de enlaces a detalles</h3>
+  <ul>
+    <li *ngFor="let item of listado; index as i">
+      <a [routerLink]="['/modulo-lista-detalle/detalle', item.id]">{{item.name}}</a>
+    </li>
+  </ul>
+</div>
+
