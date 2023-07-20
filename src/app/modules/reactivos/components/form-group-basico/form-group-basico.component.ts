@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
+import {UntypedFormGroup, UntypedFormControl, FormGroup, FormControl, Validators} from '@angular/forms';
 @Component({
   selector: 'app-form-group-basico',
   templateUrl: './form-group-basico.component.html',
@@ -7,11 +7,17 @@ import { UntypedFormGroup, UntypedFormControl } from '@angular/forms';
 })
 export class FormGroupBasicoComponent implements OnInit {
   public profileForm: UntypedFormGroup;
+  public typedProfileForm: UntypedFormGroup;
+
 
   constructor() {
     this.profileForm = new UntypedFormGroup({
-      firstName: new UntypedFormControl(''),
+      firstName: new UntypedFormControl('',[Validators.required,Validators.minLength(4)]),
       lastName: new UntypedFormControl(''),
+    });
+    this.typedProfileForm = new FormGroup({
+      firstName: new FormControl('',[Validators.required,Validators.minLength(4)]),
+      lastName: new FormControl(''),
     });
   }
 
@@ -20,5 +26,11 @@ export class FormGroupBasicoComponent implements OnInit {
 
   onSubmit() {
     console.warn(this.profileForm.value);
+    console.warn(this.profileForm.value.firstName);
+  }
+
+  onSubmitTyped() {
+    console.warn(this.typedProfileForm.value);
+    console.warn(this.typedProfileForm.value.firstName);
   }
 }

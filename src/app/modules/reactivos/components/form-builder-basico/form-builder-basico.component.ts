@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
+import {FormBuilder, FormGroup, UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
 import { Validators } from '@angular/forms';
 @Component({
   selector: 'app-form-builder-basico',
@@ -9,8 +9,10 @@ import { Validators } from '@angular/forms';
 export class FormBuilderBasicoComponent implements OnInit {
 
   public profileForm: UntypedFormGroup;
+  public typedProfileForm: FormGroup;
 
-  constructor(private fb: UntypedFormBuilder) {
+
+  constructor(private fb: UntypedFormBuilder, private tfb: FormBuilder) {
     this.profileForm= this.fb.group({
       firstName: [
         '',
@@ -28,6 +30,25 @@ export class FormBuilderBasicoComponent implements OnInit {
     this.profileForm.markAsUntouched();
     // lo marcamos como prístino
     this.profileForm.markAsPristine();
+
+    // Typed
+    this.typedProfileForm= this.tfb.group({
+      firstName: [
+        '',
+        [Validators.required,Validators.minLength(4)]
+      ],
+      lastName: [''],
+      address: this.fb.group({
+        street: [''],
+        city: [''],
+        state: [''],
+        zip: ['']
+      }),
+    });
+    // lo marcamos como no tocado
+    this.typedProfileForm.markAsUntouched();
+    // lo marcamos como prístino
+    this.typedProfileForm.markAsPristine();
   }
 
   ngOnInit(): void {
