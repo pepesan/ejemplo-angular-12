@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormControl } from '@angular/forms';
+import {FormControl, UntypedFormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-form-basico',
@@ -9,9 +9,10 @@ import { UntypedFormControl } from '@angular/forms';
 export class FormBasicoComponent implements OnInit {
 
   public name: UntypedFormControl;
-
+  public nameString: FormControl<string | null>;
   constructor() {
     this.name = new UntypedFormControl('');
+    this.nameString = new FormControl('', [Validators.required]);
   }
 
   ngOnInit(): void {

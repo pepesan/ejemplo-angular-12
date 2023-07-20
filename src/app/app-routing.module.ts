@@ -15,6 +15,8 @@ import {TodosComponent} from "./components/todos/todos.component";
 import {
   FormBuilderBasicoComponent
 } from "./modules/reactivos/components/form-builder-basico/form-builder-basico.component";
+import {EjerciciosComponent} from "./components/ejercicios/ejercicios.component";
+import {ReactivosComponent} from "./components/reactivos/reactivos.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -28,7 +30,8 @@ const routes: Routes = [
   { path: 'eventos', component: PrincipalEventosComponent },
   { path: 'madre', component: MadreComponent },
   { path: 'form', component: MainFormComponent },
-  { path: 'formreactivo', component: FormBuilderBasicoComponent },
+  { path: 'formreactivo', component: ReactivosComponent },
+  { path: 'ejercicios', component: EjerciciosComponent },
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 

@@ -26,6 +26,9 @@ import { MiPipe } from './pipes/mi-pipe.pipe';
 import { MiaDirective } from './directives/mia.directive';
 import { TodosComponent } from './components/todos/todos.component';
 import {TodoService} from "./components/todos/todo.service";
+import { EjerciciosComponent } from './components/ejercicios/ejercicios.component';
+import {EjerciciosModule} from "./modules/ejercicios/ejercicios.module";
+import { ReactivosComponent } from './components/reactivos/reactivos.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +44,9 @@ import {TodoService} from "./components/todos/todo.service";
     SignalsComponent,
     MiPipe,
     MiaDirective,
-    TodosComponent
+    TodosComponent,
+    EjerciciosComponent,
+    ReactivosComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ import {TodoService} from "./components/todos/todo.service";
     EventosModule,
     FormulariosModule,
     ReactivosModule,
-    MadrehijaModule
+    MadrehijaModule,
+    EjerciciosModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
