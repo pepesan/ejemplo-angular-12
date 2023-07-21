@@ -1,33 +1,11 @@
-<nav>
-  <ul>
-    <li><a routerLink="/home" routerLinkActive="active">Inicio</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-    <li><a routerLink="/signals" routerLinkActive="active">Signals</a></li>
-    <li><a routerLink="/listado" routerLinkActive="active">Listado</a></li>
-    <li><a routerLink="/propiedades" routerLinkActive="active">Propiedades</a></li>
-    <li><a routerLink="/directivas" routerLinkActive="active">Directivas</a></li>
-    <li><a routerLink="/pipes" routerLinkActive="active">Pipes</a></li>
-    <li><a routerLink="/services" routerLinkActive="active">Uso Service</a></li>
-    <li><a routerLink="/eventos" routerLinkActive="active">Eventos</a></li>
-    <li><a routerLink="/form" routerLinkActive="active">Form</a></li>
-    <li><a routerLink="/formreactivo" routerLinkActive="active">Form Reactivo</a></li>
-    <li><a routerLink="/madre" routerLinkActive="active">Madre/Hija</a></li>
-    <li><a routerLink="/subrutas" routerLinkActive="active">Subrutas</a></li>
-    <li><a routerLink="/subrutas/listado" routerLinkActive="active">ListadoSubrutas</a></li>
-    <li><a routerLink="/otrasrutas" routerLinkActive="active">Home Otras Rutas</a></li>
-    <li><a routerLink="/otrasrutas/about" routerLinkActive="active">About Otras Rutas</a></li>
-    <li><a routerLink="/listadodetalle" routerLinkActive="active">Listado a Detalle</a></li>
-    <li><a routerLink="/detalle/1" routerLinkActive="active">Detalle del listado</a></li>
-    <li><a routerLink="/modulo-lista-detalle" routerLinkActive="active">Modulo Lista Detalle</a></li>
-    <li><a routerLink="/modulo-lista-detalle/edit/0" routerLinkActive="active">Modulo Lista Detalle: Add</a></li>
-    <li><a routerLink="/ejercicios" routerLinkActive="active">Ejercicios</a></li>
-
-  </ul>
-</nav>
-<div class="main_content">
-  <span>{{title}} está en ejecución</span>
-  <div>
-    <router-outlet></router-outlet>
+<div>
+  <app-app-menu></app-app-menu>
+  <div class="main_content">
+    <span>{{title}} está en ejecución</span>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
   </div>
-</div>
 
+
+</div>

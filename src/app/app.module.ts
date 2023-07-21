@@ -33,6 +33,8 @@ import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
 import {OtrasrutasModule} from "./modules/otrasrutas/otrasrutas.module";
 import {ListDetailModule} from "./modules/list-detail/list-detail.module";
+import { BsModalComponent } from './components/bs-modal/bs-modal.component';
+import { AppMenuComponent } from './components/app-menu/app-menu.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import {ListDetailModule} from "./modules/list-detail/list-detail.module";
     EjerciciosComponent,
     ReactivosComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    BsModalComponent,
+    AppMenuComponent
   ],
   imports: [
     BrowserModule,

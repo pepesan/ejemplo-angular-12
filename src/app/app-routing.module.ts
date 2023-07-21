@@ -19,6 +19,7 @@ import {EjerciciosComponent} from "./components/ejercicios/ejercicios.component"
 import {ReactivosComponent} from "./components/reactivos/reactivos.component";
 import {ListComponent} from "./components/list/list.component";
 import {DetailComponent} from "./components/detail/detail.component";
+import {BsModalComponent} from "./components/bs-modal/bs-modal.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'ejercicios', component: EjerciciosComponent },
   { path: 'listadodetalle', component: ListComponent },
   { path: 'detalle/:id', component: DetailComponent },
+  { path: 'bsmodal', component: BsModalComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   { path: 'subrutas', loadChildren:
