@@ -27,4 +27,24 @@ export class ListService {
     }
     return new Dato();
   }
+
+  add(dato: Dato) {
+    this.datos.push(dato)
+
+  }
+
+  update(selectedId: number, dato: Dato){
+    this.delete(selectedId);
+    this.datos.push(dato)
+  }
+  delete(selectedId: number) {
+    this.datos = this.datos.filter(objeto => objeto.id!== selectedId)
+  }
+
+  obtenerMaximoId(): number {
+    const maxId = this.datos.reduce((max, objeto) => {
+      return objeto.id > max ? objeto.id : max;
+    }, 0);
+    return maxId;
+  }
 }

@@ -1,1 +1,24 @@
-<p>form works!</p>
+<div>
+  <h3>Formulario</h3>
+  <form class="form-group" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="typedfirstName">Name:</label>
+    <input id="typedfirstName" class="form-control" type="text" formControlName="name">
+    <div [hidden]="
+    (profileForm.controls['name'].valid
+    &&
+    profileForm.controls['name'].status=='VALID')
+    || profileForm.controls['name'].untouched
+    "
+         class="alert alert-danger">
+      <div *ngIf="profileForm.controls['name'].errors?.required == true">
+        Name is required.
+      </div>
+      <div *ngIf="profileForm.controls['name'].errors?.minlength">
+        Your name has only {{profileForm.controls['name'].errors?.minlength?.actualLength}} characters while
+        the min lenght is {{profileForm.controls['name'].errors?.minlength?.requiredLength}}
+      </div>
+    </div>
+    <div>Name: {{dato.name}}</div>
+    <input id="typedform-submit" class="btn btn-success" type="submit" value="Enviar" [disabled]="!profileForm.valid"/>
+  </form>
+</div>

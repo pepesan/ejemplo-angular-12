@@ -10,7 +10,6 @@ const routes: Routes = [
   { path: '', component: TableComponent },
   { path: 'detalle/:id', component: DetailComponent },
   { path: 'edit/:id', component: FormComponent },
-  { path: 'add', component: FormComponent }
 ];
 
 @NgModule({

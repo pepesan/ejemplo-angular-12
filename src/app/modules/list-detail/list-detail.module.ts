@@ -7,6 +7,7 @@ import {ListService} from "./services/list.service";
 import {DetailComponent} from "./components/detail/detail.component";
 import { TableComponent } from './components/table/table.component';
 import { FormComponent } from './components/form/form.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormComponent } from './components/form/form.component';
   ],
   imports: [
     CommonModule,
-    ListDetailRoutingModule
+    ListDetailRoutingModule,
+    ReactiveFormsModule
   ]
   ,providers: [ListService]
 })

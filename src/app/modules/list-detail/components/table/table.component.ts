@@ -9,10 +9,17 @@ import {ListService} from "../../services/list.service";
 })
 export class TableComponent {
   public listado: Dato[] = [];
+  public selectedID: number = 0
   constructor(private listService: ListService) {
 
     this.listado = this.listService.datos;
 
   }
 
+
+  deleteItem(id: number) {
+    console.log("deleting id: " + id)
+    this.listService.delete(id)
+    this.listado = this.listService.datos
+  }
 }
