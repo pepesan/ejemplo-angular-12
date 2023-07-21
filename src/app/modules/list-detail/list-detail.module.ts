@@ -5,12 +5,16 @@ import { ListDetailRoutingModule } from './list-detail-routing.module';
 import { ListadoComponent } from './components/listado/listado.component';
 import {ListService} from "./services/list.service";
 import {DetailComponent} from "./components/detail/detail.component";
+import { TableComponent } from './components/table/table.component';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
   declarations: [
     ListadoComponent,
-    DetailComponent
+    DetailComponent,
+    TableComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,30 @@
+<div>
+  <h3>Listado de enlaces a detalles</h3>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Operations</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of listado; index as i">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.name}}</td>
+      <td>
+        <a
+          class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
+          id="show-{{item.id}}" [routerLink]="['/modulo-lista-detalle/detalle', item.id]">Show</a>
+        <a
+          class="btn btn-outline-warning btn-lg active" role="button" aria-pressed="true"
+          id="show-{{item.id}}" [routerLink]="['/modulo-lista-detalle/edit', item.id]">Edit</a>
+        <a
+          class="btn btn-outline-danger btn-lg active" role="button" aria-pressed="true"
+          id="show-{{item.id}}" [routerLink]="['/modulo-lista-detalle/delete', item.id]">Delete</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

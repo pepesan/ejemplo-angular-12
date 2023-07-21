@@ -1,25 +1,32 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, Router} from "@angular/router";
 import {ListService} from "../../services/list.service";
 import {Dato} from "../../classes/dato";
+
 @Component({
-  selector: 'app-detail',
-  templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.sass']
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.sass']
 })
-export class DetailComponent {
+export class FormComponent {
+
   selectedStringId: string|null=null;
   selectedId: number = 0;
   dato: Dato = new Dato();
+
   constructor(
     private route: ActivatedRoute,
     private listService: ListService,
     private _router: Router) {
+    this.extractId();
+  }
+
+  private extractId() {
     console.log(this.route.snapshot.paramMap.get('id'))
     this.selectedStringId = this.route.snapshot.paramMap.get('id');
-    if(this.selectedStringId){
+    if (this.selectedStringId) {
       this.selectedId = parseInt(this.selectedStringId);
-    }else {
+    } else {
       this.selectedId = 1;
     }
     this.dato = this.listService.getById(this.selectedId);
