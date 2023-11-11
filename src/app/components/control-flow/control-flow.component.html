@@ -1,0 +1,40 @@
+<h2>if</h2>
+@if (isLoggedIn) {
+<h2>VA ser que si</h2>
+}
+
+@if (isLoggedIn) {
+<h2>VA ser que si</h2>
+} @else{
+<h2>Va a ser que no</h2>
+}
+
+@if (a > b) {
+{{a}} is greater than {{b}}
+  } @else if (b > a) {
+{{a}} is less than {{b}}
+  } @else {
+{{a}} is equal to {{b}}
+  }
+<h2>for</h2>
+@for (os of operatingSystems; track os.id) {
+<p>{{ os.name }}</p>
+} @empty {
+<li> There are no items. </li>
+}
+
+@for (os of operatingSystems; track os.id; let idx = $index, e = $even) {
+  Item #{{ idx }}: {{ os.name }}
+}
+<h2>Switch</h2>
+@switch (a) {
+    @case (2) {
+      Case A.
+    }
+    @case (3) {
+      Case B.
+    }
+    @default {
+      Default case.
+    }
+}

@@ -33,6 +33,9 @@ import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
 import {OtrasrutasModule} from "./modules/otrasrutas/otrasrutas.module";
 import {ListDetailModule} from "./modules/list-detail/list-detail.module";
+import { ControlFlowComponent } from './components/control-flow/control-flow.component';
+import { DeferComponent } from './components/defer/defer.component';
+import { SimpleComponent } from './components/simple/simple.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import {ListDetailModule} from "./modules/list-detail/list-detail.module";
     EjerciciosComponent,
     ReactivosComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    ControlFlowComponent,
+    DeferComponent,
+    SimpleComponent
   ],
   imports: [
     BrowserModule,

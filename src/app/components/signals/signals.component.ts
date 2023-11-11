@@ -21,15 +21,17 @@ export class SignalsComponent implements OnInit{
     // Increment the count by 1.
     // Cambiar el valor usando un a función
     this.countSignal.update((value: number) => value + 1);
-    // Mutate cambia el valor interno sin reescribir su contenido
-    this.cadenasSignal.mutate((value: string[]): void => {
-      value.push("hola")
-    })
+    // Mutate cambia el valor interno sin reescribir su contenido (fallo en v17)
+    // this.cadenasSignal.mutate((value: string[]): void => {
+    //   value.push("hola")
+    // })
+    // TODO: Revisar la modificación de señales para arrays
   }
   cambia(){
-    this.cadenasSignal.mutate((value: string[]): void =>{
-      value.push("Adios")
-    })
+    /// Fallo en v17
+    // this.cadenasSignal.mutate((value: string[]): void =>{
+    //   value.push("Adios")
+    // })
   }
 
 }

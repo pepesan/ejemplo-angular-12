@@ -19,6 +19,8 @@ import {EjerciciosComponent} from "./components/ejercicios/ejercicios.component"
 import {ReactivosComponent} from "./components/reactivos/reactivos.component";
 import {ListComponent} from "./components/list/list.component";
 import {DetailComponent} from "./components/detail/detail.component";
+import {ControlFlowComponent} from "./components/control-flow/control-flow.component";
+import {DeferComponent} from "./components/defer/defer.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -26,7 +28,9 @@ const routes: Routes = [
   { path: 'signals', component: SignalsComponent },
   { path: 'listado', component: ListadoPartidosComponent },
   { path: 'propiedades', component: UsaPropiedadesComponent },
+  { path: 'defer', component: DeferComponent },
   { path: 'directivas', component: DirectivasComponent },
+  { path: 'control-flow', component: ControlFlowComponent },
   { path: 'pipes', component: PipesComponent },
   { path: 'services', component: TodosComponent },
   { path: 'eventos', component: PrincipalEventosComponent },
