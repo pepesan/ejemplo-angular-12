@@ -1,0 +1,54 @@
+<div>
+  <h2>Ejemplo simple</h2>
+  <app-simple/>
+  <h2>Carga Diferida</h2>
+  @defer {
+    <app-simple/>
+  }
+  <h2>Carga Diferida con placeholder</h2>
+  @defer {
+  <app-simple/>
+  } @placeholder (minimum 4000ms) {
+  <p>Placeholder content</p>
+  }
+  <h2>Carga Diferida con placeholder y loading</h2>
+  @defer {
+  <app-simple/>
+  } @placeholder (minimum 4000ms) {
+  <p>Placeholder content</p>
+  } @loading (after 1000ms; minimum 2s) {
+  <img alt="loading..." src="loading.gif" />
+  }
+  <h2>Carga Diferida con placeholder y loading y error</h2>
+  @defer {
+  <app-simple/>
+  } @placeholder (minimum 4000ms) {
+  <p>Placeholder content</p>
+  } @loading (after 1000ms; minimum 2s) {
+  <img alt="loading..." src="loading.gif" />
+  } @error {
+  <p>Failed to load the calendar</p>
+  }
+  <!-- por defecto usa el idle como trigger cuando se "para" el navegador -->
+
+  <h2>Carga Diferida on ViewPort (cuando es visible) or 5s</h2>
+  @defer (on viewport; on timer(5s)) {
+  <app-simple/>
+  }@placeholder {
+  <img src="placeholder.png" />
+  }
+  <h2>On interaction es cuando le has hecho click o keydown</h2>
+  @defer (on interaction) {
+    <app-simple/>
+  }@placeholder {
+   <h2>hasta que no me hagas click</h2>
+  }
+  <h3>El resto serían</h3>
+  <ul>
+    <li>hover</li>
+    <li>inmediate</li>
+    <li>timer(x)</li>
+  </ul>
+
+
+</div>
