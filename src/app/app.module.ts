@@ -36,6 +36,7 @@ import {ListDetailModule} from "./modules/list-detail/list-detail.module";
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { DeferComponent } from './components/defer/defer.component';
 import { SimpleComponent } from './components/simple/simple.component';
+import {TodosCompletoComponent} from "./components/todos-completo/todos.component";
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { SimpleComponent } from './components/simple/simple.component';
     MiPipe,
     MiaDirective,
     TodosComponent,
+    TodosCompletoComponent,
     EjerciciosComponent,
     ReactivosComponent,
     ListComponent,

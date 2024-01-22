@@ -21,6 +21,7 @@ import {ListComponent} from "./components/list/list.component";
 import {DetailComponent} from "./components/detail/detail.component";
 import {ControlFlowComponent} from "./components/control-flow/control-flow.component";
 import {DeferComponent} from "./components/defer/defer.component";
+import {TodosCompletoComponent} from "./components/todos-completo/todos.component";
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'control-flow', component: ControlFlowComponent },
   { path: 'pipes', component: PipesComponent },
   { path: 'services', component: TodosComponent },
+  { path: 'todos', component: TodosCompletoComponent },
   { path: 'eventos', component: PrincipalEventosComponent },
   { path: 'madre', component: MadreComponent },
   { path: 'form', component: MainFormComponent },
